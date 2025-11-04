@@ -1,0 +1,35 @@
+{
+  "simulation_params": {
+    "number_of_layers": 500,
+    "dt": 0.025,
+    "mode": "non-hybrid"
+  },
+  "circuit_setup": {
+    "num_qubits": 3,
+    "num_clbits": 3,
+    "inputs": [1, 0, -1]
+  },
+  "lorenz_params": {
+    "Ro": 32,
+    "Bt": 2.6666666666666665,
+    "P": 10
+  },
+  "normalization_params": {
+    "edge_factor": 1.0
+  },
+  "templates": {
+    "feedback_template": [
+      [0, 0, 1],
+      [-1, 0, 0],
+      [1, 0, -1]
+    ],
+    "control_template_lorenz": [
+      ["1-P", "P", 0],
+      ["Ro", 0, 0],
+      [0, 0, "1-Bt"]
+    ]
+  },
+  "visualization_params": {
+    "apply_unwrap": true
+  }
+}
